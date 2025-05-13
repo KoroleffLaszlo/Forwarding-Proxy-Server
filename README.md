@@ -1,12 +1,12 @@
 # INFO
-Ran on WSL, ensure device running following program is Linux based.
+Program intended for a Linux Environment, created and tested on Windows with WSL
 # Forwarding Proxy Server 
 A proxy server that forwards client requests to end servers and vice versa. On startup, it reads a _forbidden list_ file to determine how to handle incoming requests. The proxy uses OpenSSL’s API to validate end-server certificates, only allowing self-signed certificates when explicitly requested by the client. All proxy activity is logged to a file specified at program start.
 # Running Program
 Standard `make` to create executable
 ## Run Server
 1. `cd bin`.
-2. Run server with following line execution: `./myproxy -p <port> -a <forbidden site file> -l <logging file> [-u]` The optional `-u` flag is used to allow proxy server to relay requests to self-signed host servers.
+2. Run server with following line execution: `./myproxy -p <port> -a <forbidden site file> -l <logging file> [-u]`. The optional `-u` flag is used to allow proxy server to relay requests to self-signed host servers.
 3. `Ctrl-C` updates proxy server's registered _forbidden list_.
 4. `Ctrl-\` terminates program.
 
